@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeuje test document</title>
+    <link rel="stylesheet" href="../../playground/css/styles.css">
+    <script>
+        console.info("head scripts: START")
+    </script>
+    <link rel="modulepreload" href="../../src/jeuje.js">
+    <link rel="modulepreload" href="simple.js">
+    <script>
+        console.info("head scripts: END")
+    </script>
+</head>
+
+<body>
+    <main>
+        <heading>
+            <h1>Simple Example of "jeuje"</h1>
+        </heading>
+        <section id="section1">
+            <header>
+                <h2>Example</h2>
+            </header>
+            <p>Fill out the form below and press submit.</p>
+            <fieldset>
+                <legend>legend</legend>
+                <form>
+                    <label>
+                        <span>Email Address</span>
+                        <input type="text" name="email" />
+                        <span></span>
+                    </label>
+                    <label>
+                        <span>First Name</span>
+                        <input type="text" name="fname" />
+                        <span>message yeah or nay</span>
+                    </label>
+                    <label>
+                        <span>Last Name</span>
+                        <input type="text" name="lname" />
+                        <span>message yeah or nay</span>
+                    </label>
+                    <label>
+                        <span>This is just a test to see how the label text wraps and to see what happns if it needs to wrap to the next line</span>
+                        <input type="text" name="lname" />
+                        <span>message yeah or nay</span>
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+
+    <script>
+        console.info("simple.js: pre")
+    </script>
+    <script type="module" src="simple.js"></script>
+    <script>
+        console.info("simple.js: post")
+    </script>
+</body>
+
+</html>

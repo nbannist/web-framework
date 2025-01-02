@@ -1,0 +1,43 @@
+/**
+ * 
+ * Styles for "jeuje" examples
+ * Needs some work--grid is new to me so just playin'
+ **/
+
+html,
+body {
+    background-color: #333333;
+    color: #fefefe;
+    font-size: 16px;
+}
+
+form>label {
+    display: grid;
+    grid-template-columns: 32% 68%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "label field"
+        "label msg";
+    margin-bottom: .5rem;
+}
+
+form>label>span {
+    text-align: right;
+    grid-area: label;
+    min-height: 1.25rem;
+    margin-right: .25rem;
+}
+
+form>label>span+input {
+    grid-area: field;
+    text-align: left;
+    margin-left: .25rem;
+    padding: .5rem;
+}
+
+form>label>span+input+span {
+    grid-area: msg;
+    text-align: left;
+    margin: 0.125rem;
+    padding: .25rem;
+}
